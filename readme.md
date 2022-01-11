@@ -28,7 +28,7 @@ By using its cutting edge technology (lolnope), you can now have a persistent mu
 
 # Demo
 
-![demo pty4all](https://www.youtube.com/watch?v=TTEGIhvu7eQ)
+[![demo pty4all](https://img.youtube.com/vi/TTEGIhvu7eQ/3.jpg)](https://www.youtube.com/watch?v=TTEGIhvu7eQ)
 
 
 # Features
