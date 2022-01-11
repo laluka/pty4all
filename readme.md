@@ -13,6 +13,8 @@ Say no more, `pty4all` got you all covered!
 
 By using its cutting edge technology (lolnope), you can now have a persistent multi reverse pty handler!
 
+![This is an image](meme.png)
+
 
 # Usage
 
@@ -26,7 +28,7 @@ By using its cutting edge technology (lolnope), you can now have a persistent mu
 
 # Demo
 
-TODO youtube link
+![demo pty4all](https://www.youtube.com/watch?v=TTEGIhvu7eQ)
 
 
 # Features
