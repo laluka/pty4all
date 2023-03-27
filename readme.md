@@ -19,7 +19,7 @@ By using its cutting edge technology (lolnope), you can now have a persistent mu
 # Usage
 
 ```bash
-./socat-multi-handler.sh                                                                                                                                                           130 ↵
+./socat-multi-handler.sh
 # Usage : ./socat-multi-handler.sh --lhost <LHOST> --lport <LPORT> --webport <WEBPORT> [--dnotify <WEBHOOK> ] [--persist]
 # Demo 1: ./socat-multi-handler.sh --lhost X.X.X.X --lport 443 --webport 80
 # Demo 2: ./socat-multi-handler.sh --lhost X.X.X.X --lport 443 --webport 80 --dnotify https://discord.com/api/webhooks/XXXX/YYYY --persist
