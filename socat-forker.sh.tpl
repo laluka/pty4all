@@ -6,7 +6,7 @@ SOCKF=${SOCKDIR}/usock
 # Start tmux, if needed
 tmux start
 # Create window
-tmux new-window "socat UNIX-LISTEN:${SOCKF},umask=0077 file:\`tty\`,echo=0"
+tmux new-window "socat UNIX-LISTEN:${SOCKF},umask=0077 file:\`tty\`,echo=1"
 # Wait for socket
 while test ! -e ${SOCKF}; do sleep 1; done
 SOCAT_TTY=$(tty)
