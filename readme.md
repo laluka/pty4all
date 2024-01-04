@@ -23,6 +23,11 @@ By using its cutting edge technology (lolnope), you can now have a persistent mu
 # Usage : ./socat-multi-handler.sh --lhost <LHOST> --lport <LPORT> --webport <WEBPORT> [--dnotify <WEBHOOK> ] [--persist]
 # Demo 1: ./socat-multi-handler.sh --lhost X.X.X.X --lport 443 --webport 80
 # Demo 2: ./socat-multi-handler.sh --lhost X.X.X.X --lport 443 --webport 80 --dnotify https://discord.com/api/webhooks/XXXX/YYYY --persist
+
+# Update your shell size: paste the result of this command in your rev-shell
+echo "stty rows $LINES cols $COLUMNS"
+# Make your shell smooth, fix ^L etc
+export TERM=xterm-256color
 ```
 
 
