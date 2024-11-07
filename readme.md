@@ -50,5 +50,9 @@ https://www.youtube.com/watch?v=TTEGIhvu7eQ
 
 # Requirements
 
-- Target must be x64 unix-based with curl installed
+- Target must be x64 unix-based with curl installed, but a few tweaks can "make things work", I've had success for ARM & MIPS.
 - Host must have socat, tmux, python, openssl, and curl installed: `sudo apt update && sudo apt install -y socat tmux curl python openssl`
+
+# Kudos
+
+- https://systemoverlord.com/2018/01/20/socat-as-a-handler-for-multiple-reverse-shells.html
