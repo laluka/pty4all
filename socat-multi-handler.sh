@@ -40,6 +40,9 @@ if [[ -z "${TMUX}" ]]; then
     exit 42
 fi
 
+# Make tool work from any directory
+cd $(dirname "$0")
+
 echo -e "\n\n\n[+] Generating tls certs and keys"
 if [ -f server.pem ]; then
     echo "[+] Files already exist, using server.pem"
